@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fi-FI">
+    <head>
+        <title>Bank</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <style>
+        input.larger {
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+      }
+            h1 {text-align: center;}
+            p {text-align: center;}
+            div {text-align: left;}
+            form {text-align: left;}
+
+            h1 {font-size: 2.5em; /* 40px/16=2.5em */}
+            h2 {font-size: 1.5em; /* 40px/16=2.5em */}
+            ul {font-size: 1.5em; /* 40px/16=2.5em */}
+            p {font-size: 1.5em; /* 40px/16=2.5em */}
+            input {font-size: 1.5em; /* 40px/16=2.5em */}
+            div {font-size: 1.5em; /* 40px/16=2.5em */}
+            input.larger {font-size: 2em; /* 40px/16=2.5em */}
+            input.smaller {font-size: 1em; /* 40px/16=2.5em */}
+            
+
+            button {font-size: 1.5em; /* 40px/16=2.5em */}
+            form {font-size: .8em; /* 40px/16=2.5em */}
+            body {
+            background-color: rgb(241, 172, 195); 
+            }
+
+        </style >
+
+        <h1 text-align: center;  id="bank_h" style="color:blue" > BANK DATA BASE</h1>
+        
+        <div>
+        <P id="p_new_cus_or_not" style="display: inline-block;" "color:rgb(9, 9, 19);"  >Do you want to create a new customer?</p>
+        <button id ="button_newcus_yes" style="color:rgb(119, 17, 17);"> YES</button>
+        <button id="button_newcus_no" style="color:rgb(96, 16, 16);" >No</button>
+        </div>
+
+        <form  id="form_new_user" ></form>
+        <div>
+            Customer Name:
+            <!---..<p id="p_cus_nam" style="display: inline-block" >Customer name: </p> -->   
+            <input type="String" name="input_cus_nam" id ="input_cus_nam" > </input> 
+            Social Security Number:
+           <!--- <p id="p_cus_id" style="display: inline-block">Social Security number: </p> -->  
+            <input type="String" name="input_cus_id" id ="input_cus_id" > </input>    
+        </div>  
+
+     
+        <div>
+    
+            Address:
+            <!--<p id="p_cus_address" style="display: inline-block" >Address: </p> -->     
+            <input type="String" name="input_cus_add" id ="input_cus_add" > </input>
+            Phone Number: 
+            <!--<p id="p_cus_phone" style="display: inline-block">Phone_number: </p>  -->  
+            <input type="number" name= "input_cus_phone" id ="input_cus_phone" > </input>    
+        </div>
+
+        <div>
+            User Name:
+            <!--<p id="p_Cus_user_name" style="display: inline-block" >User name: </p> -->    
+            <input type="String" name="input_cus_user_name" id ="input_cus_user_name" > </input> 
+            Password:
+            <!--<p id="p_Cus_password" style="display: inline-block">Password: </p>   -->
+            <input type="String" name="input_cus_pass" id ="input_cus_pass" > </input>    
+        </div>
+        
+        
+        
+
+        <p id="p_rec" style="display: inline-block">Do your customer want: </p> 
+        <br>  
+        <div>
+            <input type="checkbox"  style="display: inline-block" class="larger" name="main_check" id="check_bankA" value="1" ></input> 
+            <label for="bank_A" style="display: inline-block"> Bank Account</label><br>
+           
+      
+                <input type="checkbox" style="display: inline-block" class="larger" name= "main_check" id="check_creditA" value="2"></input> 
+                <label for="Credit_A" style="display: inline-block"> Credit Account</label><br>
+                
+                Add credit limit here in Euros
+                <input type="number" style="display: inline-block" class="smaller" id="credit_lim" ></input><br> 
+     
+           
+            <input type="checkbox" style="display: inline-block" class="larger" name="main_check" id="check_deposit" value="3" ></input> 
+            <label for="Deposit" style="display: inline-block"> Deposit </label><br><br>
+        </div>
+        <div>
+
+       
+        <input type="radio" style="display: inline-block" class="smaller" name= "diposit_check" id="diposit_bank" ></input> 
+        <label for="diposit_bank" style="display: inline-block"> to bank account</label><br>
+        <input type="radio" style="display: inline-block"  class="smaller" name= "diposit_check" id="diposit_credit" ></input> 
+        <label for="Credit_A" style="display: inline-block"> to credit account</label><br>
+        <input type="radio" style="display: inline-block" class="smaller"  name= "diposit_check" id="diposit_both" ></input> 
+        <label for="Credit_A" style="display: inline-block"> to both</label><br>
+        Add amount here in Euros
+        <input type="number" style="display: inline-block"  id="amount_money" ></input><br> 
+        </div>
+        <button id="create_new_customer" style="color:rgb(96, 16, 16);" >Create new customer</button>
+            <!--<input type ="submit" value="Create new Customer" id="submit_create_customer"></input>  -->
+
+           
+          </form>
+          <br>
+
+       
+
+
+
+        <div>
+<P id="p_exist_cus" style="display: inline-block;" "color:rgb(9, 9, 19);"  >Are you an existing customer?</p>
+<button id ="button_exis_cus_yes" style="color:rgb(119, 17, 17);"> YES</button>
+    <button id="button_existing_cus_no" style="color:rgb(96, 16, 16);" >No</button>
+    </div>
+
+<div>
+    <p id="p_cus_id_v" style="display: inline-block" >Customer ID: </p>     
+    <input type="String"  id ="input_cus_id_v" > </input> 
+    <p id="p_cus_phone_v" style="display: inline-block">Phone number: </p>   
+    <input type="number" id ="input_cus_phone_v" > </input>    
+</div>  
+
+
+<br>
+    <P id="p_to_do" style="display: inline-block;" "color:rgb(9, 9, 19);"  >What customer wants to do?</p> 
+    <form action="/action_page.php"></form>
+    <input type="checkbox"  class="larger" id="chk_new_BA" >
+    <label for="open_B"> Open new bank account</label><br>
+    <input type="checkbox" class="larger" id="chk_new_CA" >
+    <label for="open_C"> Open new credit account</label><br>
+    <input type="checkbox" class="larger" id="chk_deposit" >
+    <label for="deposit_c"> Deposit money</label><br>
+    <input type="checkbox"  class="larger" id="chk_transfer_money" >
+    <label for="transf"> Transfer money</label><br>
+    <input type="checkbox"  class="larger" id="chk_withdraw_money" >
+    <label for="withdr"> Withdraw money</label><br>
+    <input type="checkbox"  class="larger" id="chk_balance" >
+    <label for="withdr"> Check balance</label><br>
+    <br>
+    <input type="submit" value="Submit" id="submit_exsi_cus">
+  </form>
+    
+
+        <script > 
+
+// Link to Html code:::::
+
+           
+//////////////////////////////////////////////////////////////////
+/**** Part 1 : Create Customer ****/
+        const form_new_user=document.getElementById("form_new_user");
+        const bank_h=document.getElementById("bank_h");
+         // new cutomer or not
+        const p_new_cus_or_not=document.getElementById("new_cus_or_not");   
+        const button_newcus_yes=document.getElementById("button_newcus_yes");
+        const button_newcus_no= document.getElementById("button_newcus_no");
+
+        // getting cutomer info:
+        // name : Socila security id : Address: phone: User name : Password
+        //const p_cus_nam= document.getElementById("p_cus_nam");
+        
+   
+        const create_cus= document.getElementById("create_new_customer")
+        const input_cus_nam= document.getElementById("input_cus_nam");
+        const input_cus_id=document.getElementById("input_cus_id");
+        const input_cus_add=document.getElementById("input_cus_add");
+        const input_cus_phone= document.getElementById("input_cus_phone");
+        const p_Cus_user_name= document.getElementById("p_Cus_user_name");
+        const input_cus_user_name=document.getElementById("input_cus_user_name");
+        const p_Cus_password= document.getElementById("p_Cus_password");
+        const input_cus_pass=document.getElementById("input_cus_pass");
+        
+
+        // Requirements : with check box and then submit:::
+        const p_rec=document.getElementById("p_rec");
+        const check_bankA=document.getElementById("check_bankA");
+        const check_creditA=document.getElementById("check_creditA");
+        const credit_lim=document.getElementById("credit_lim")
+        const check_deposit= document.getElementById("check_deposit");
+        const diposit_bank =document.getElementById("diposit_bank");
+        const diposit_credit=document.getElementById("diposit_credit");
+        const diposit_both=document.getElementById("diposit_both");
+        const amount_money =document.getElementById("amount_money")
+        const submit_create_customer= document.getElementById("submit_create_customer");
+
+//////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////
+        /**** Part 2 : Existing Customer ****/
+        
+ // Check customer exist or not:  if yes or not things may change: If existing customer we have 
+ // things to do: else we have to plan :) :) :)
+
+ // verification with customer id and phone number:
+        const p_exist_cus=document.getElementById("p_exist_cus");
+        const button_exis_cus_yes=document.getElementById("button_exis_cus_yes");
+        const button_existing_cus_no=document.getElementById("button_existing_cus_no");
+       
+        // input name
+        const p_cus_id_v= document.getElementById("p_cus_id_v");
+        const input_cus_id_v= document.getElementById("input_cus_id_v");
+        // input id
+        const p_cus_phone_v=document.getElementById("input_cus_user_name");
+        const input_cus_phone_v= document.getElementById("input_cus_phone_v");
+
+        // Check with check boxes what to do: we can go for buttons too: However, 
+        // execute depend on the request...
+
+        // crrate new accounts: deposit: transfer: check balance: withdraw :......
+        // and submit::
+        const p_to_do=document.getElementById("p_to_do");
+        const chk_new_BA= document.getElementById("chk_new_BA");
+        const chk_new_CA=document.getElementById("chk_new_CA");
+        const chk_deposit= document.getElementById("chk_deposit");
+        const chk_transfer_money= document.getElementById("chk_transfer_money");
+        const chk_withdraw_money=document.getElementById("chk_withdraw_money");
+        const chk_balance= document.getElementById("chk_balance");
+        const submit_exsi_cus= document.getElementById("submit_exsi_cus");
+
+///////////////////////////////////////////////////////////////////////
+
+//// Global variables goes here::
+
+
+/// Classes and objects goes here:
+
+class Customer {
+    static idnumber = 0;
+    // user name and PW has to sectrt
+    #customer_username1=0;
+    #custmer_PW1=0;
+    constructor(cutomer_name, customer_soci_sec,customer_address,customer_phone_nu,
+    customer_username,custmer_PW) {
+        this.customer_name=cutomer_name;
+        this.customer_soci_sec=customer_soci_sec;
+        this.customer_address=customer_address;
+        this.customer_phone_nu=customer_phone_nu;
+        this.customer_username1=customer_username;
+        this.custmer_PW1=custmer_PW;
+        this.bankaccountnumber = 0;
+        this.customernumber = ++Customer.idnumber;// this need to modify... 
+        
+        }
+         return_cust_num() {
+            return (this.customernumber)
+          
+    }
+   
+}
+
+class BankAccount {
+                static idnumber = 0;
+                constructor(customernumber) {
+                    this.customernumber = customernumber;
+                    this.bankaccountnumber = ++BankAccount.idnumber;
+                    this.balance = 0;
+                    this.accountypo="bank_AC"
+                }
+                // change balance
+                // positive value increases
+                // negative value is withdrawal
+                changebalance(money) {       
+                    if ( (money >= 0) || (Math.abs(money) <= this.balance)) {
+                            this.balance += money;
+                            return true;
+                    }
+                    return false;
+                }
+                //bankaccountnumber = ++BankAccount.idnumber
+            }
+
+            class CreditAccount extends BankAccount {
+                //static idnumber = 0;
+                constructor(customernumber,credit_lim) {
+                    super();
+                    this.customernumber = customernumber;
+                    //this.bankaccountnumber = ++BankAccount.idnumber;
+                   // this.balance = 0;
+                    this.accountypo="credit_AC"
+                
+                   this.creditlimit=credit_lim;
+                    console.log(this.creditlimit)
+                } 
+                changebalance(money) {       
+                    if ( (money >= 0) || (Math.abs(money)  <= this.balance +this.creditlimit)) {
+                            this.balance += money;
+                            return true;
+                    }
+                    return false;
+                }
+           
+            }
+
+
+/// Functions goes heree::::
+
+
+///////////////////////////////////////////////
+/// code body goes here:::.
+
+
+button_newcus_yes.addEventListener("click" ,function(){
+    create_new_customer.addEventListener("click" ,function(){
+
+    console.log("test")
+    bank_account_array=[];
+   
+input_cus_nam.focus();
+customer_name= input_cus_nam.value;
+customer_soci_sec=input_cus_id.value;
+customer_address=input_cus_add.value;
+customer_phone_nu=input_cus_phone.value;
+customer_username=input_cus_user_name.value;
+customer_PW= input_cus_pass.value;
+
+dummy_customer= new Customer(customer_name, customer_soci_sec,customer_address,
+customer_phone_nu,customer_username,customer_PW);
+
+console.log(dummy_customer)
+
+dummy_cus_id=dummy_customer.return_cust_num();
+if (check_bankA.checked){
+    dummybankaccount = new BankAccount(dummy_cus_id);
+    console.log(dummybankaccount);
+    bank_account_array.push(dummybankaccount.bankaccountnumber);
+}
+
+if (check_creditA.checked){
+    credit_limit=credit_lim.value;
+    dummycreditaccount =new CreditAccount(dummy_cus_id, credit_limit);
+    console.log(dummycreditaccount);
+    bank_account_array.push(dummycreditaccount.bankaccountnumber);
+    console.log(bank_account_array)
+}
+dummy_customer.bankaccountnumber= bank_account_array;
+
+///////////////////////
+if (check_deposit){
+    amount=Number(amount_money.value);
+    console.log(amount_money.value);
+    
+    if(diposit_bank){
+       dummybankaccount.balance =amount
+    }
+    if (diposit_credit){
+        dummycreditaccount.balance =amount
+    }
+    if (diposit_both){
+        dummybankaccount.balance =amount
+        dummycreditaccount.balance =amount
+    }   
+}
+///////////////////////////////
+})
+
+
+})
+
+
+button_newcus_no.addEventListener("click" ,function(){
+
+    form_new_user.style.display = "none";
+
+})
+
+// if customer need bank account
+
+//if (check_bankA.addEventListener('change', function(e) {
+  //console.log(check_bankA.checked, "yuhuueeQEQ");})
+  /*
+  // if customer need credit account:::
+  check_creditA.addEventListener('change', function(e) {
+  console.log(check_creditA.checked, "yuhuuQDW");})
+
+  // if customer need to deposit
+  check_deposit.addEventListener('change', function(e) {
+  console.log(check_deposit.checked, "yuhuuEe   ");})*/
+
+ 
+
+
+
+
+  
+
+/*
+
+<form id = 'player_stuff'>
+    Player's Position:<br>
+    <input type="radio" name="position" value="p1" checked>Position One
+    <input type="radio" name="position" value="p2">Position Two
+    <input type="radio" name="position" value="p3">Position Three
+    <input type="radio" name="position" value="p4">Positin Four
+    <br/>
+    Add by Player ID:<br>
+    <input type='text' name='player_id'>
+    <input type="button" value="Submit Player" id='smit' >
+</form>
+<div id="disp_player"></div>
+Then using querySelector and querySelectorAll
+
+document.getElementById('smit').onclick = function () {
+    var checkedPosition =
+        document.querySelectorAll("#player_stuff [name='position']:checked");
+    var playerId =
+        document.querySelector("#player_stuff [name='player_id']");
+    var position = checkedPosition[0].value;
+    var player_id = playerId.value;
+
+    document.getElementById('disp_player').innerHTML =
+        position + " " + player_id;
+}
+*/
+
+
+        </script>
+    </body>
+</html> 
+   
+   
